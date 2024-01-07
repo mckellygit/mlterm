@@ -1559,6 +1559,8 @@ static void set_window_name(vt_parser_t *vt_parser,
   free(vt_parser->win_name);
   vt_parser->win_name = name;
 
+  return;
+
   if (HAS_XTERM_LISTENER(vt_parser, set_window_name)) {
 #if 0
     stop_vt100_cmd(vt_parser, 0);
